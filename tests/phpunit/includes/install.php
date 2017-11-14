@@ -34,7 +34,8 @@ global $phpmailer;
 require_once( dirname( __FILE__ ) . '/mock-mailer.php' );
 $phpmailer = new MockPHPMailer();
 
-register_theme_directory( dirname( __FILE__ ) . '/../data/themedir1' );
+
+register_theme_directory( WP_DEFAULT_THEME_DIR );
 
 /*
  * default_storage_engine and storage_engine are the same option, but storage_engine
