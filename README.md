@@ -15,31 +15,37 @@ This repository is a test base for setting up unit testing of wordpress theme an
 2. Copy wp-test-config-sample.php and create a file wp-test-config.php 
 3. Update wp-test-config.php 
 
-                define( 'WP_DEFAULT_THEME', ‘your-default-theme' );
-                define( 'WP_DEFAULT_THEME_DIR', ‘your-wordpress-theme-directory-path' );
+    define( 'WP_DEFAULT_THEME', ‘your-default-theme' );
 
-               Please provide the full path of the theme directory which is to be unit tested in WP_DEFAULT_THEME_DIR.
-               
-               Update the database details for testing , Never use your production database for testing , it will be wiped out. Please use a separate blank database for testing 
-            
-               define( 'DB_NAME', 'youremptytestdbnamehere' );
-               define( 'DB_USER', 'yourusernamehere' );
-               define( 'DB_PASSWORD', 'yourpasswordhere' );
-               define( 'DB_HOST', 'localhost' );
-               define( 'DB_CHARSET', 'utf8' );
-               define( 'DB_COLLATE', '' );
+    define( 'WP_DEFAULT_THEME_DIR', ‘your-wordpress-theme-directory-path' );
 
-               Update other details in wp-config-test.php if required.
+   Please provide the full path of the theme directory which is to be unit tested in WP_DEFAULT_THEME_DIR.
+   
+   Update the database details for testing , Never use your production database for testing , it will be wiped out. Please use a separate blank database for testing 
+
+   define( 'DB_NAME', 'youremptytestdbnamehere' );
+
+   define( 'DB_USER', 'yourusernamehere' );
+
+   define( 'DB_PASSWORD', 'yourpasswordhere' );
+
+   define( 'DB_HOST', 'localhost' );
+
+   define( 'DB_CHARSET', 'utf8' );
+   
+   define( 'DB_COLLATE', '' );
+
+   Update other details in wp-config-test.php if required.
 
 4. Update phpunit.xml.dist 
             
-                Update the file path to point out the directory with unit test cases placed for your plugin or theme
+    Update the file path to point out the directory with unit test cases placed for your plugin or theme
 
-                <testsuite>
-                    <directory suffix=".php">tests/phpunit/tests</directory>
-                    ….
+    <testsuite>
+        <directory suffix=".php">tests/phpunit/tests</directory>
+        ….
 
-                update the path on above line , replacing "tests/phpunit/tests” with your test files. 
+    update the path on above line , replacing "tests/phpunit/tests” with your test files. 
 
 ### Execute UnitTests ### 
 
@@ -51,6 +57,3 @@ This repository is a test base for setting up unit testing of wordpress theme an
 https://phpunit.de/getting-started.html
 
 https://make.wordpress.org/core/handbook/testing/automated-testing/phpunit/
-
-     
-
